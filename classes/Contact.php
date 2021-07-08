@@ -28,7 +28,7 @@ class Contact
     }
     
     /*A getter method*/
-    public function getId(){
+    public function getContactId(){
         return $this->id;
     }
     
