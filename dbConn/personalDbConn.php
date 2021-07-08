@@ -11,6 +11,14 @@ class personaldbConn extends dbConn
         return $this->conn->query($sql);
     }
 
+    // View
+    public function viewSingleContact($id)
+    {
+        $sql = "SELECT * FROM `PersonalContact` WHERE ID = " . $id;
+
+        return $this->conn->query($sql);
+    }
+
     // Insert
 	public function insertContact($persCon)
 	{
@@ -56,8 +64,8 @@ class personaldbConn extends dbConn
             "contactAddr1 = '" . $persCon->getContactAddr1() . "'," .
             "contactAddr2 = '" . $persCon->getContactAddr2() . "'," .
             "contactCity = '" . $persCon->getContactCity() . "'," .
-            "contactPostcode = '" . $persCon->getPostcode() . "'" .
-            "WHERE " . "ID = " . $persCon->getContactId();
+            "contactPostcode = '" . $persCon->getContactPostcode() . "'" .
+            " WHERE " . "ID = " . $persCon->getContactId();
 
         if ($this->conn->query($sql) === TRUE) {
             echo "Record updated successfully";

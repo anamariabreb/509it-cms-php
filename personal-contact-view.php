@@ -13,18 +13,6 @@
             <div id="content">
                 <?php include 'shared/navbar.php'; ?>
 
-               
-
-
-                <?php //include 'dbConn/dbConn.php'; ?>
-                <?php 
-
-                    //$dbConn = new dbConn();
-
-                    //return $dbConn->connect();
-                
-                ?>
-
                 <?php 
             
                     include 'dbConn/personalDbConn.php';
@@ -36,22 +24,35 @@
                         //Connect
                         $mysqlConn->connect();
 
-                        
-                        $PersonalContact = new PersonalContact(
-                            Null,
-                            $_POST['FName'], 
-                            $_POST['LName'], 
-                            $_POST['Tel'], 
-                            $_POST['HomeTel'], 
-                            $_POST['Email'], 
-                            $_POST['Addr1'], 
-                            $_POST['Addr2'], 
-                            $_POST['City'], 
-                            $_POST['Postcode']);
+                        //ID will be available only when the contact is updated
+                        if (isset($_GET['id'])) {
+                            $PersonalContact = new PersonalContact(
+                                $_GET['id'],
+                                $_POST['FName'], 
+                                $_POST['LName'], 
+                                $_POST['Tel'], 
+                                $_POST['HomeTel'], 
+                                $_POST['Email'], 
+                                $_POST['Addr1'], 
+                                $_POST['Addr2'], 
+                                $_POST['City'], 
+                                $_POST['Postcode']);
+                            $mysqlConn->updateContact($PersonalContact);
+                        } else {
+                            $PersonalContact = new PersonalContact(
+                                Null,
+                                $_POST['FName'], 
+                                $_POST['LName'], 
+                                $_POST['Tel'], 
+                                $_POST['HomeTel'], 
+                                $_POST['Email'], 
+                                $_POST['Addr1'], 
+                                $_POST['Addr2'], 
+                                $_POST['City'], 
+                                $_POST['Postcode']);
 
-
-
-                        $mysqlConn->insertContact($PersonalContact);
+                            $mysqlConn->insertContact($PersonalContact);
+                        }                   
                     }
                 
                 ?>
