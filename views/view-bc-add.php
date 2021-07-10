@@ -1,6 +1,7 @@
 <?php $root=$_SERVER["DOCUMENT_ROOT"]; ?>
 
-<?php include ($root . '/shared/header.php');?>
+<?php include ($root . '/shared/header.php'); ?>
+
 
 <body id="page-top">
 
@@ -10,15 +11,13 @@
 
         <!-- Content Wrapper -->
         <div id="content-wrapper" class="d-flex flex-column">
-
             <!-- Main Content -->
             <div id="content">
                 <?php include ($root . '/shared/navbar.php'); ?>
 
-                <?php include ($root . '/views/view-pc-insert.php'); ?>
+                <?php include ($root . '/partials/pc-method-insert.php'); ?>
               
-                <?php include ($root . '/views/view-pc-form.php'); ?>
-                
+                <?php include ($root . '/partials/pc-form.php'); ?>              
             </div>
         </div>
         <!-- End of Content Wrapper -->

@@ -14,8 +14,10 @@
             <!-- Main Content -->
             <div id="content">
                 <?php include ($root . '/shared/navbar.php'); ?>
-          
-                <?php include ($root . '/partials/pc-database.php'); ?>                
+
+                <?php include ($root . '/partials/pc-method-insert.php'); ?>
+              
+                <?php include ($root . '/partials/pc-form.php'); ?>              
             </div>
         </div>
         <!-- End of Content Wrapper -->
