@@ -15,7 +15,7 @@
 
                
 
-                <?php include 'partials/ps-table.php'; ?>
+                <?php include 'partials/pc-table.php'; ?>
                 
             </div>
         </div>

@@ -1,5 +1,7 @@
+<?php $root=$_SERVER["DOCUMENT_ROOT"]; ?>
+
 <?php
-require 'dbConn/dbConn.php';
+require ($root . '/dbConn/dbConn.php');
 
 class personaldbConn extends dbConn
 {

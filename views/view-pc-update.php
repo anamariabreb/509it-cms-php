@@ -1,4 +1,4 @@
-<?php include 'shared/header.php';?>
+<?php include '../shared/header.php';?>
 
 <body id="page-top">
 
@@ -29,7 +29,7 @@
 
                         if ($result->num_rows > 0) {
                             while($row = $result->fetch_assoc()) {
-                                include 'personal-contact-form.php';
+                                include 'view-pc-form.php';
                             }                           
                         }
                         else {
