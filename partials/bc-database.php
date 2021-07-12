@@ -43,7 +43,7 @@
                             </tr>
                         </thead> 
                         <tbody>
-                            <?php include 'pc-table.php'; ?>
+                            <?php include 'bc-table.php'; ?>
                         </tbody>  
 
                     </table>
