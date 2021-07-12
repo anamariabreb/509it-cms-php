@@ -26,7 +26,7 @@
                 
                     <div class="row">
                         <div class="col-sm-6 mb-3 mb-sm-0">
-                            <a href="/views/view-pc-index.php" class="btn btn-primary btn-icon-split">
+                            <a href="/views/view-pc-add.php" class="btn btn-primary btn-icon-split">
                                 <span class="icon text-white-50">
                                     <i class="fas fa-flag"></i>
                                 </span>
@@ -35,7 +35,7 @@
                         </div>
 
                         <div class="col-sm-6 mb-3 mb-sm-0">
-                            <a href="/views/view-bc-index.php" class="btn btn-primary btn-icon-split">
+                            <a href="/views/view-bc-add.php" class="btn btn-primary btn-icon-split">
                                 <span class="icon text-white-50">
                                     <i class="fas fa-flag"></i>
                                 </span>

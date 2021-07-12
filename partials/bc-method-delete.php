@@ -16,19 +16,19 @@
                 <?php // This needs attention!!! ?>
                 <?php 
             
-                    include 'dbConn/personalDbConn.php';
-                    include 'classes/PersonalContact.php';
+                    include 'dbConn/businessDbConn.php';
+                    include 'classes/BusinessContact.php';
 
                     if ($_SERVER['REQUEST_METHOD'] == "GET") {
 
-                        $mysqlConn = new personalDbConn();
+                        $mysqlConn = new businessDbConn();
                         $mysqlConn->connect();
 
                         if (isset($_GET['id'])) {
                            $mysqlConn->deleteContact($_GET['id']);
                         }    
                         
-                        header("Location: /view-ps-manage.php");
+                        header("Location: /view-bc-manage.php");
                     }
                 ?>  
             </div>

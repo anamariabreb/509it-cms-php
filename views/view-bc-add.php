@@ -15,9 +15,9 @@
             <div id="content">
                 <?php include ($root . '/shared/navbar.php'); ?>
 
-                <?php include ($root . '/partials/pc-method-insert.php'); ?>
+                <?php include ($root . '/partials/bc-method-insert.php'); ?>
               
-                <?php include ($root . '/partials/pc-form.php'); ?>              
+                <?php include ($root . '/partials/bc-form.php'); ?>              
             </div>
         </div>
         <!-- End of Content Wrapper -->

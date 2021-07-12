@@ -15,7 +15,7 @@
             <div id="content">
                 <?php include ($root . '/shared/navbar.php'); ?>
           
-                <?php include ($root . '/partials/pc-table.php'); ?>                
+                <?php include ($root . '/partials/bc-database.php'); ?>                
             </div>
         </div>
         <!-- End of Content Wrapper -->

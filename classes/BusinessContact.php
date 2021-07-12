@@ -1,20 +1,22 @@
+<?php $root=$_SERVER["DOCUMENT_ROOT"] ;?>
+
 <?php
+require ($root .'/classes/Contact.php');
 
 class BusinessContact extends Contact
 {
     private $businessTel;
     
     /*Constructor Method*/
-    public function BusinessContact($id, $businessTel)
+    public function __construct($id, $fName, $lName, $tel, $businessTel, $email, $addrL1, $addrL2, $city, $postcode,)
     {
-        if ($id!=null) {
-            $this->id = $id;
-        }
+        parent::__construct($id, $fName, $lName, $tel, $email, $addrL1, $addrL2, $city, $postcode);
+
         $this->businessTel = $businessTel;
     }
         
     /*A getter method*/
-    public function getbusinessTel()
+    public function getContactBusinessTel()
     {
         return $this->businessTel;
     }
