@@ -20,7 +20,6 @@
                     <h1>Welcome!</h1>
                     <br>
                     <h4 class="h4 text-gray-900 mb-4">What would you like to do?</h4>
-                    <p>Access the Contacts records:</p>
                     <br>
                     <br>
                 
