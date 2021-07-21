@@ -12,6 +12,8 @@
             <!-- Main Content -->
             <div id="content">
 
+                <?php include ('../shared/navbar.php'); ?>
+
                 <?php 
             
                     include '../dbConn/businessDbConn.php';
@@ -28,7 +30,7 @@
 
                         if ($result->num_rows > 0) {
                             while($row = $result->fetch_assoc()) {
-                                include ('../partials/bc-form-update.php');
+                                include ('../partials/bc-form-wrapper.php');
                             }                           
                         }
                         else {

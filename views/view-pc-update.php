@@ -28,10 +28,9 @@
 
                             if ($result->num_rows > 0) {
                                 while($row = $result->fetch_assoc()) {
-                                    include '../partials/pc-form-update.php';
+                                    include '../partials/pc-form-wrapper.php';
                                 }                           
                             }
-
                         }
                         else {
                             echo "No results";

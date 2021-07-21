@@ -1,7 +1,5 @@
-<?php $root=$_SERVER["DOCUMENT_ROOT"]; ?>
-
 <?php 
-    include $root . '/dbConn/businessDbConn.php';
+    include '../dbConn/businessDbConn.php';
     $mysqlConn = new businessDbConn();
     //Connect
     $mysqlConn->connect();

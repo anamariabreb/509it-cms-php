@@ -1,21 +1,19 @@
-<?php $root=$_SERVER["DOCUMENT_ROOT"]; ?>
-
-<?php include ($root . '/shared/header.php'); ?>
+<?php include ('../shared/header.php'); ?>
 
 
 <body id="page-top">
 
     <!-- Page Wrapper -->
     <div id="wrapper">
-        <?php include ($root . '/shared/sidebar.php'); ?>
+        <?php include ('../shared/sidebar.php'); ?>
 
         <!-- Content Wrapper -->
         <div id="content-wrapper" class="d-flex flex-column">
             <!-- Main Content -->
             <div id="content">
-                <?php include ($root . '/shared/navbar.php'); ?>
+                <?php include ('../shared/navbar.php'); ?>
           
-                <?php include ($root . '/partials/pc-database.php'); ?> 
+                <?php include ('../partials/pc-database.php'); ?> 
 
                 <div class="card">
                     <div class="card-body text-right">                   
@@ -35,4 +33,4 @@
     <!-- End of Page Wrapper -->
 </body>
 
-<?php include ($root . '/shared/footer.php'); ?>
+<?php include ('../shared/footer.php'); ?>

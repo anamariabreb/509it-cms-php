@@ -1,5 +1,3 @@
-<?php $root=$_SERVER["DOCUMENT_ROOT"]; ?>
-
 <?php include ('../shared/header.php'); ?>
 
 
@@ -17,7 +15,7 @@
 
                 <?php include ('../partials/pc-method-add.php'); ?>
               
-                <?php include ('../partials/pc-form-add.php'); ?>              
+                <?php include ('../partials/pc-form-wrapper.php'); ?>              
             </div>
         </div>
         <!-- End of Content Wrapper -->

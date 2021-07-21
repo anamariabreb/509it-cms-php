@@ -48,7 +48,7 @@ class personaldbConn extends dbConn
         if ($this->conn->query($sql) === TRUE) {           
             echo "New record created successfully. Go to <a href='". $this->link_address ."'> Manage Contacts </a>";            
         } else {
-            echo "Error: " . $sql . "<br>" . $this->conn->error;
+            echo "Error: " . $this->conn->error;
         }
     }
 

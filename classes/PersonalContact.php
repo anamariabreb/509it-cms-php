@@ -1,7 +1,5 @@
-<?php $root=$_SERVER["DOCUMENT_ROOT"] ;?>
-
 <?php
-require ($root .'/classes/Contact.php');
+require ('../classes/Contact.php');
 
 class PersonalContact extends Contact
 {

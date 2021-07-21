@@ -1,8 +1,6 @@
-<?php $root=$_SERVER["DOCUMENT_ROOT"]; ?>
-
 <?php        
-    include ($root . '/dbConn/businessDbConn.php');
-    include ($root . '/classes/BusinessContact.php');
+    include ('../dbConn/businessDbConn.php');
+    include ('../classes/BusinessContact.php');
 
     if ($_SERVER['REQUEST_METHOD'] == "POST") {
 
