@@ -18,9 +18,6 @@ class dbConn {
         if ($this->conn->connect_error) {
             die("Connection failed: " . $this->conn->connect_error);
         }
-        else {
-            echo "Succesfully connected";
-        }   
         
     }
 

@@ -1,10 +1,10 @@
-<?php $root=$_SERVER["DOCUMENT_ROOT"]; ?>
-
 <?php
-require ($root . '/dbConn/dbConn.php');
+require ('../dbConn/dbConn.php');
 
 class personaldbConn extends dbConn
 {
+    public  $link_address = "../views/view-pc-manage.php";
+
     // View
     public function viewContact()
     {
@@ -45,9 +45,8 @@ class personaldbConn extends dbConn
             ". $persCon->getContactPostcode() . "
             ')";
 
-
-        if ($this->conn->query($sql) === TRUE) {
-            echo "New record created successfully";
+        if ($this->conn->query($sql) === TRUE) {           
+            echo "New record created successfully. Go to <a href='". $this->link_address ."'> Manage Contacts </a>";            
         } else {
             echo "Error: " . $sql . "<br>" . $this->conn->error;
         }
@@ -70,7 +69,7 @@ class personaldbConn extends dbConn
             " WHERE " . "ID = " . $persCon->getContactId();
 
         if ($this->conn->query($sql) === TRUE) {
-            echo "Record updated successfully";
+            echo "Record updated successfully. Go to <a href='". $this->link_address ."'> Manage Contacts </a>";
           } else {
             echo "Error updating record: " . $this->conn->error;
           }
@@ -82,7 +81,7 @@ class personaldbConn extends dbConn
         $sql = "DELETE FROM `PersonalContact` WHERE ID = " . $id;
 
         if ($this->conn->query($sql) === TRUE) {
-            echo "Record deleted successfully";
+            echo "Record deleted successfully. Go to <a href='". $this->link_address ."'> Manage Contacts </a>" ;
         } else {
             echo "Error deleting record: " . $this->conn->error;
         }

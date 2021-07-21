@@ -4,41 +4,40 @@
 
     <!-- Page Wrapper -->
     <div id="wrapper">
-        <?php include 'shared/sidebar.php'; ?>
+        <?php include '../shared/sidebar.php'; ?>
 
         <!-- Content Wrapper -->
         <div id="content-wrapper" class="d-flex flex-column">
 
             <!-- Main Content -->
             <div id="content">
-                <?php include 'shared/navbar.php'; ?>
+                <?php include '../shared/navbar.php'; ?>
 
                 <?php 
             
-                    include 'dbConn/businessDbConn.php';
-                    include 'classes/BusinessContact.php';
+                    include '../dbConn/personalDbConn.php';
+                    include '../classes/PersonalContact.php';
 
                     if ($_SERVER['REQUEST_METHOD'] == "GET") {
 
-                        $mysqlConn = new businessDbConn();
+                        $mysqlConn = new personalDbConn();
                         $mysqlConn->connect();
 
                         if (isset($_GET['id'])) {
                             $result = $mysqlConn->viewSingleContact($_GET['id']);
-                        }
 
-                        if ($result->num_rows > 0) {
-                            while($row = $result->fetch_assoc()) {
-                                include 'view-bc-form.php';
-                            }                           
+                            if ($result->num_rows > 0) {
+                                while($row = $result->fetch_assoc()) {
+                                    include '../partials/pc-form-update.php';
+                                }                           
+                            }
+
                         }
                         else {
                             echo "No results";
-                        }                      
+                        }                         
                     }
-                ?>
-
-                
+                ?>    
                 
             </div>
         </div>

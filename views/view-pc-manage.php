@@ -15,7 +15,18 @@
             <div id="content">
                 <?php include ($root . '/shared/navbar.php'); ?>
           
-                <?php include ($root . '/partials/pc-database.php'); ?>                
+                <?php include ($root . '/partials/pc-database.php'); ?> 
+
+                <div class="card">
+                    <div class="card-body text-right">                   
+                        <a href="view-pc-add.php" class="btn btn-primary btn-icon-split">
+                            <span class="icon text-white-50">
+                                <i class="fas fa-arrow-right"></i>
+                            </span>
+                            <span class="text">Add Personal Contact</span>
+                        </a>  
+                    </div>
+                </div>        
             </div>
         </div>
         <!-- End of Content Wrapper -->

@@ -25,20 +25,20 @@
                 
                     <div class="row">
                         <div class="col-sm-6 mb-3 mb-sm-0">
-                            <a href="/views/view-pc-add.php" class="btn btn-primary btn-icon-split">
+                            <a href="/views/view-pc-manage.php" class="btn btn-primary btn-icon-split">
                                 <span class="icon text-white-50">
                                     <i class="fas fa-flag"></i>
                                 </span>
-                                <span class="text">Personal Contacts</span>
+                                <span class="text">Manage Personal Contacts</span>
                             </a>
                         </div>
 
                         <div class="col-sm-6 mb-3 mb-sm-0">
-                            <a href="/views/view-bc-add.php" class="btn btn-primary btn-icon-split">
+                            <a href="/views/view-bc-manage.php" class="btn btn-primary btn-icon-split">
                                 <span class="icon text-white-50">
                                     <i class="fas fa-flag"></i>
                                 </span>
-                                <span class="text">Business Contacts</span>
+                                <span class="text">Manage Business Contacts</span>
                             </a>
                         </div>
                     </div>                   

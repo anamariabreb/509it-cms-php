@@ -24,7 +24,7 @@
             <td><?php echo $row["contactCity"]; ?></td>
             <td><?php echo $row["contactPostcode"]; ?></td>
             <td>
-                <a href="pc-method-update.php?id=<?php echo $row["ID"]; ?>" class="btn btn-secondary btn-icon-split">
+                <a href="view-pc-update.php?id=<?php echo $row["ID"]; ?>" class="btn btn-secondary btn-icon-split">
                     <span class="icon text-white-50">
                         <i class="fas fa-arrow-right"></i>
                     </span>
@@ -32,7 +32,7 @@
                 </a>
             </td>
             <td>
-                <a href="pc-method-delete.php?id=<?php echo $row["ID"]; ?>" class="btn btn-danger btn-icon-split">
+                <a href="view-pc-delete.php?id=<?php echo $row["ID"]; ?>" class="btn btn-danger btn-icon-split">
                     <span class="icon text-white-50">
                         <i class="fas fa-trash"></i>
                     </span>

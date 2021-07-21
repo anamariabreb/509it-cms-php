@@ -1,23 +1,23 @@
 <?php $root=$_SERVER["DOCUMENT_ROOT"]; ?>
 
-<?php include ($root . '/shared/header.php'); ?>
+<?php include ('../shared/header.php'); ?>
 
 
 <body id="page-top">
 
     <!-- Page Wrapper -->
     <div id="wrapper">
-        <?php include ($root . '/shared/sidebar.php'); ?>
+        <?php include ('../shared/sidebar.php'); ?>
 
         <!-- Content Wrapper -->
         <div id="content-wrapper" class="d-flex flex-column">
             <!-- Main Content -->
             <div id="content">
-                <?php include ($root . '/shared/navbar.php'); ?>
+                <?php include ('../shared/navbar.php'); ?>
 
-                <?php include ($root . '/partials/pc-method-insert.php'); ?>
+                <?php include ('../partials/pc-method-add.php'); ?>
               
-                <?php include ($root . '/partials/pc-form.php'); ?>              
+                <?php include ('../partials/pc-form-add.php'); ?>              
             </div>
         </div>
         <!-- End of Content Wrapper -->
@@ -26,4 +26,4 @@
     <!-- End of Page Wrapper -->
 </body>
 
-<?php include ($root . '/shared/footer.php'); ?>
+<?php include ('../shared/footer.php'); ?>
