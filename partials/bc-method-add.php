@@ -38,5 +38,4 @@
             $mysqlConn->insertContact($BusinessContact);
         }                   
     }
-
 ?>

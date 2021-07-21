@@ -1,85 +1,87 @@
 <?php
-// define variables and set to empty values to avoid undefined variables error
-$FNameErr = $LNameErr = $EmailErr = $Addr1Err = $CityErr = $PostcodeErr = "";
-$FName = $LName = $Email = $Addr1 = $City = $Postcode = "";
+    // define variables and set to empty values to avoid undefined variables error
+    $FNameErr = $LNameErr = $EmailErr = $Addr1Err = $CityErr = $PostcodeErr = "";
+    $FName = $LName = $Email = $Addr1 = $City = $Postcode = "";
 
 
-function test_input($data) {
-    $data = trim($data);
-    $data = stripslashes($data);
-    $data = htmlspecialchars($data);
-    return $data;
-}
-
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    // First Name validation
-    if (empty($_POST["FName"])) {
-        $FNameErr = "First Name is required";
-    } else {
-        $FName = test_input($_POST["FName"]);
-        // check if name only contains letters and whitespace
-        if (!preg_match("/^[a-zA-Z-' ]*$/",$FName)) {
-            $FNameErr = "Only letters and white space allowed";
-        }
+    function test_input($data) {
+        $data = trim($data);
+        $data = stripslashes($data);
+        $data = htmlspecialchars($data);
+        return $data;
     }
 
-    // Last Name validation
-    if (empty($_POST["LName"])) {
-        $LNameErr = "Last Name is required";
-    } else {
-        $LName = test_input($_POST["LName"]);
-        // check if name only contains letters and whitespace
-        if (!preg_match("/^[a-zA-Z-' ]*$/",$LName)) {
-            $LNameErr = "Only letters and white space allowed";
+// Validation
+    if ($_SERVER["REQUEST_METHOD"] == "POST") {
+        // First Name validation
+        if (empty($_POST["FName"])) {
+            $FNameErr = "First Name is required";
+        } else {
+            $FName = test_input($_POST["FName"]);
+            // check if name only contains letters and whitespace
+            if (!preg_match("/^[a-zA-Z-' ]*$/",$FName)) {
+                $FNameErr = "Only letters and white space allowed";
+            }
         }
-    }
-  
-    // Email validation
-    if (empty($_POST["Email"])) {
-        $EmailErr = "Email is required";
-    } else {
-        $Email = test_input($_POST["Email"]);
-        // check if e-mail address is well-formed
-        if (!filter_var($Email, FILTER_VALIDATE_EMAIL)) {
-            $EmailErr = "Invalid email format";
-        }
-    }
 
-    // Address validation
-    if (empty($_POST["Addr1"])) {
-        $Addr1Err = "Address Line 1 is required";
-    } else {
-        $Addr1 = test_input($_POST["Addr1"]);
-        // check if name only contains letters and whitespace
-        if (!preg_match("/^\s*[a-z0-9\s]+$/i",$Addr1)) {
-            $Addr1Err = "Please enter a valid Address Line 1";
+        // Last Name validation
+        if (empty($_POST["LName"])) {
+            $LNameErr = "Last Name is required";
+        } else {
+            $LName = test_input($_POST["LName"]);
+            // check if name only contains letters and whitespace
+            if (!preg_match("/^[a-zA-Z-' ]*$/",$LName)) {
+                $LNameErr = "Only letters and white space allowed";
+            }
         }
-    }
+    
+        // Email validation
+        if (empty($_POST["Email"])) {
+            $EmailErr = "Email is required";
+        } else {
+            $Email = test_input($_POST["Email"]);
+            // check if e-mail address is well-formed
+            if (!filter_var($Email, FILTER_VALIDATE_EMAIL)) {
+                $EmailErr = "Invalid email format";
+            }
+        }
 
-    // City validation
-    if (empty($_POST["City"])) {
-        $CityErr = "City is required";
-    } else {
-        $City = test_input($_POST["City"]);
-        // check if name only contains letters and whitespace
-        if (!preg_match("/^[a-zA-Z-' ]*$/",$City)) {
-            $CityErr = "Only letters and white space allowed";
+        // Address validation
+        if (empty($_POST["Addr1"])) {
+            $Addr1Err = "Address Line 1 is required";
+        } else {
+            $Addr1 = test_input($_POST["Addr1"]);
+            // check if name only contains letters and whitespace
+            if (!preg_match("/^\s*[a-z0-9\s]+$/i",$Addr1)) {
+                $Addr1Err = "Please enter a valid Address Line 1";
+            }
         }
-    }
 
-    // Postcode validation
-    if (empty($_POST["Postcode"])) {
-        $PostcodeErr = "Postcode is required";
-    } else {
-        $Postcode = test_input($_POST["Postcode"]);
-        // check if name only contains letters and whitespace
-        if (!preg_match("/^[A-Z]?[A-Z][0-9][A-Z0-9]?\s[0-9][A-Z]{2}$/",$Postcode)) {
-            $PostcodeErr = "Please enter a valid UK Postcode";
+        // City validation
+        if (empty($_POST["City"])) {
+            $CityErr = "City is required";
+        } else {
+            $City = test_input($_POST["City"]);
+            // check if name only contains letters and whitespace
+            if (!preg_match("/^[a-zA-Z-' ]*$/",$City)) {
+                $CityErr = "Only letters and white space allowed";
+            }
+        }
+
+        // Postcode validation
+        if (empty($_POST["Postcode"])) {
+            $PostcodeErr = "Postcode is required";
+        } else {
+            $Postcode = test_input($_POST["Postcode"]);
+            // check if name only contains letters and whitespace
+            if (!preg_match("/^[A-Z]?[A-Z][0-9][A-Z0-9]?\s[0-9][A-Z]{2}$/",$Postcode)) {
+                $PostcodeErr = "Please enter a valid UK Postcode";
+            }
         }
     }
-}
 ?>
 
+<?php // Error output ?>
 <p class="error" style="font-size: 1rem;" >* required field</p>
 <div class="error" style="font-size: 1rem; color:darkred; width: 100%;"> 
     <p><?php echo $FNameErr;?></p>
@@ -90,6 +92,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <p><?php echo $PostcodeErr;?></p>
 </div>
 
+
+<?php // Form fields ?>
 
 <div class="form-group row">
     <div class="col-sm-6 mb-3 mb-sm-0">
